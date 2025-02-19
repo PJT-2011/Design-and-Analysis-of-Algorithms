@@ -95,6 +95,11 @@ This output indicates that:
 - The elements were pushed onto the stack.
 - They were displayed correctly while the original stack was restored.
 
+## Asciinema Recording
+```bash
+https://asciinema.org/a/704462
+```
+
 ## Conclusion
 
 This project provides a clear example of using the STL `stack` container in C++ for basic operations. The method used to display stack elements ensures that the stack's content is preserved, demonstrating an important technique for working with stacks where only the top element is directly accessible.
