@@ -78,18 +78,18 @@ int main() {
 ## How to Compile and Run
 
 1. **Clone this repository:**
-```
+   ```
    git clone https://github.com/PJT-2011/Design-and-Analysis-of-Algorithms.git
-   cd DAA/Graph
-```
+   cd DAA/Graphs
+   ```
 
 2. **Compile the code** using a C++ compiler such as `g++`:
    ```bash
-   g++ -o graph main.cpp
+   g++ -o graphs Graphs.cpp
    ```
 3. **Run the executable**:
    ```bash
-   ./graph
+   ./graphs
    ```
 
 ## Expected Output
