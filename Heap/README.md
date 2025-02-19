@@ -112,6 +112,11 @@ This output demonstrates:
 - The **max-heap** displays elements in descending order.
 - The **min-heap** displays elements in ascending order.
 
+## Asciinema Recording
+```bash
+https://asciinema.org/a/704466
+```
+
 ## Conclusion
 
 This example illustrates the use of the STL `priority_queue` to implement both max-heaps and min-heaps in C++. It serves as a basic demonstration of heap operations and can be extended for more complex applications that require efficient retrieval of the maximum or minimum element.
