@@ -186,6 +186,11 @@ This confirms that:
 - The search operation successfully finds the value.
 - The deletion operation removes the specified node and the list updates accordingly.
 
+## Asciinema Recording
+```bash
+https://asciinema.org/a/704468
+```
+
 ## Conclusion
 
 This project provides a fundamental example of how to implement and manipulate a doubly linked list in C++. The operations demonstrated here serve as a foundation for more advanced data structure manipulations and algorithms. Feel free to modify and expand this code to suit your learning or project needs.
