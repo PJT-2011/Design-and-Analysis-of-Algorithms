@@ -109,6 +109,11 @@ Adjacency list of vertex 3
 
 This output shows that vertex 0 is connected to vertices 1, 2, and 3, and so on.
 
+## Asciinema Recording
+```bash
+https://asciinema.org/a/704465
+```
+
 ## Conclusion
 
 This simple C++ program illustrates the basics of graph representation using adjacency lists. It serves as a foundation for more complex graph algorithms and helps in understanding dynamic data structures and memory management in C++.
