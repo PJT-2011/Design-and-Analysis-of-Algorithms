@@ -181,6 +181,11 @@ This output confirms that the circular linked list is:
 - **Searching** for a value correctly.
 - **Deleting** the specified node and updating the list accordingly.
 
+## Asciinema Recording
+```bash
+https://asciinema.org/a/704467
+```
+
 ## Conclusion
 
 This project offers a simple yet effective demonstration of implementing a circular linked list in C++. The operations include insertion, deletion, search, and display, making it a useful reference for understanding the management of circular linked lists and dynamic memory in C++.
