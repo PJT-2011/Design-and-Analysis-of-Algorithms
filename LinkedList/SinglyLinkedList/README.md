@@ -182,6 +182,11 @@ This output confirms that:
 - The search operation finds the specified value.
 - The removal operation successfully deletes the node with the value `20`, and the list updates accordingly.
 
+## Asciinema Recording
+```bash
+https://asciinema.org/a/704469
+```
+
 ## Conclusion
 
 This project provides a simple example of how to implement and manage a singly linked list in C++. It covers basic operations such as insertion, deletion, search, and display, and serves as a good starting point for learning about linked data structures in C++.
