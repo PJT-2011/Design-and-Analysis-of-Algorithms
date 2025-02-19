@@ -83,6 +83,11 @@ Dequeuing elements:
 Queue is now empty.
 ```
 
+## Asciinema Recording
+```bash
+https://asciinema.org/a/704460
+```
+
 ## Conclusion
 
 This project provides a simple demonstration of how to use the C++ STL `queue` container to perform basic queue operations. The code serves as a good starting point for understanding the FIFO (First-In, First-Out) data structure in C++.
