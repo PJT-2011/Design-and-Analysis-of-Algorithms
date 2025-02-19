@@ -141,6 +141,11 @@ Tree (In-Order Traversal): 10 20 30 40
 
 This demonstrates that the tree is displaying its elements in sorted order.
 
+## Asciinema Recording
+```bash
+https://asciinema.org/a/704464
+```
+
 ## Conclusion
 
 This project provides a simple yet effective demonstration of how to implement a binary search tree in C++ with basic operations such as insertion, in-order traversal, and memory deallocation. It serves as a solid foundation for understanding more advanced tree structures and algorithms in C++.
