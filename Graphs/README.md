@@ -1,3 +1,6 @@
+
+---
+
 # Graph Representation Using Adjacency Lists in C++
 
 This project demonstrates a simple implementation of an undirected graph using the adjacency list data structure in C++. It includes functions for creating the graph, adding edges, and printing the adjacency list for each vertex.
@@ -74,18 +77,19 @@ int main() {
 
 ## How to Compile and Run
 
-1. **Clone this repository**
-   ```
+1. **Clone this repository:**
+```
    git clone https://github.com/PJT-2011/Design-and-Analysis-of-Algorithms.git
-   cd DAA/pt1/Graph
-  ```
+   cd DAA/Graph
+```
+
 2. **Compile the code** using a C++ compiler such as `g++`:
-   ```
+   ```bash
    g++ -o graph main.cpp
    ```
 3. **Run the executable**:
-   ```
-   ./graphs
+   ```bash
+   ./graph
    ```
 
 ## Expected Output
@@ -110,3 +114,4 @@ This output shows that vertex 0 is connected to vertices 1, 2, and 3, and so on.
 This simple C++ program illustrates the basics of graph representation using adjacency lists. It serves as a foundation for more complex graph algorithms and helps in understanding dynamic data structures and memory management in C++.
 
 --- 
+
