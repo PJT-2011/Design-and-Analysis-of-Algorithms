@@ -1,90 +1,82 @@
-#include <iostream>
-#include <vector>
-#include <queue>
+#include<iostream>
+#include<cstdlib>
 using namespace std;
 
-class Graph {
-    int vertices;
-    vector<vector<int>> adjList;
-
-public:
-    Graph(int v) {
-        vertices = v;
-        adjList.resize(v);
-    }
-
-    void addEdge(int u, int v) {
-        adjList[u].push_back(v);
-        adjList[v].push_back(u);
-    }
-
-    void displayGraph() {
-        for (int i = 0; i < vertices; i++) {
-            cout << "Vertex " << i << ": ";
-            for (int neighbor : adjList[i]) {
-                cout << neighbor << " ";
-            }
-            cout << endl;
-        }
-    }
-
-    void bfs(int start) {
-        vector<bool> visited(vertices, false);
-        queue<int> q;
-        q.push(start);
-        visited[start] = true;
-
-        cout << "BFS Traversal: ";
-        while (!q.empty()) {
-            int node = q.front();
-            q.pop();
-            cout << node << " ";
-
-            for (int neighbor : adjList[node]) {
-                if (!visited[neighbor]) {
-                    visited[neighbor] = true;
-                    q.push(neighbor);
-                }
-            }
-        }
-        cout << endl;
-    }
-
-    void dfsUtil(int node, vector<bool>& visited) {
-        visited[node] = true;
-        cout << node << " ";
-
-        for (int neighbor : adjList[node]) {
-            if (!visited[neighbor]) {
-                dfsUtil(neighbor, visited);
-            }
-        }
-    }
-
-    void dfs(int start) {
-        vector<bool> visited(vertices, false);
-        cout << "DFS Traversal: ";
-        dfsUtil(start, visited);
-        cout << endl;
-    }
+struct AdjListNode{
+    int data;
+    AdjListNode *next;
 };
 
-int main() {
-    Graph g(5);
-    g.addEdge(0, 1);
-    g.addEdge(0, 4);
-    g.addEdge(1, 2);
-    g.addEdge(1, 3);
-    g.addEdge(1, 4);
-    g.addEdge(2, 3);
-    g.addEdge(3, 4);
+struct AdjList{
+    AdjListNode *head;  
+};
 
-    cout << "Graph Representation:" << endl;
-    g.displayGraph();
-    
-    cout << endl;
-    g.bfs(0);
-    g.dfs(0);
+struct Graph{
+    int V;
+    AdjList *arr;
+};
 
-    return 0;
+AdjListNode *newAdjListNode(int);
+Graph *createGraph(int);
+void addEdge(Graph*,int,int);
+void printGraph(Graph*);
+
+int main(){
+
+    int totalVertices=4;
+    Graph *graph;
+    graph=createGraph(totalVertices);
+
+    addEdge(graph,0,1);
+    addEdge(graph,0,2);
+    addEdge(graph,0,3);
+    addEdge(graph,1,3);
+    addEdge(graph,2,3);
+
+    printGraph(graph);
+}
+
+AdjListNode* newAdjListNode(int data){
+    AdjListNode *nptr=new AdjListNode;
+    nptr->data=data;
+    nptr->next=NULL;
+    return nptr;
+}
+
+Graph* createGraph(int V){
+    Graph *graph=new Graph;
+    graph->V=V;
+
+    graph->arr=new AdjList[V];
+
+    for(int i=0;i<V;i++){
+        graph->arr[i].head=NULL;
+    }
+    return graph;
+}
+
+void addEdge(Graph *graph,int src,int dest){
+
+    AdjListNode *nptr=newAdjListNode(dest);
+    nptr->next=graph->arr[src].head;
+    graph->arr[src].head=nptr;
+
+    nptr=newAdjListNode(src);
+    nptr->next=graph->arr[dest].head;
+    graph->arr[dest].head=nptr;
+}
+
+
+void printGraph(Graph* graph){
+
+    for(int i=0;i<graph->V;i++){
+        AdjListNode *root=graph->arr[i].head;
+        cout<<"Adjacency list of vertex "<<i<<endl;
+
+        while(root!=NULL){
+            cout<<root->data<<" -> ";
+            root=root->next;
+        }
+        cout<<endl;
+    }
 }
