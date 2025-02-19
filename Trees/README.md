@@ -1,4 +1,3 @@
-Below is the content you can include in your **README.md** file:
 
 ---
 
