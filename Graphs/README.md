@@ -79,13 +79,12 @@ int main() {
    git clone https://github.com/PJT-2011/Design-and-Analysis-of-Algorithms.git
    cd DAA/pt1/Graph
   ```
-
-1. **Compile the code** using a C++ compiler such as `g++`:
-   ```bash
+2. **Compile the code** using a C++ compiler such as `g++`:
+   ```
    g++ -o graph main.cpp
    ```
-2. **Run the executable**:
-   ```bash
+3. **Run the executable**:
+   ```
    ./graphs
    ```
 
